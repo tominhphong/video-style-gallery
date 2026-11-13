@@ -1,4 +1,7 @@
-﻿<title>Video Style Gallery</title>
+﻿<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<script>(function(){var p=location.pathname;if(!/\/$|\.html$/.test(p)){var b=document.createElement('base');b.href=p+'/';document.head.appendChild(b)}})()</script>
+<title>Video Style Gallery</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
@@ -172,4 +175,5 @@ $('#theme').onclick=()=>{const r=document.documentElement,cur=r.dataset.theme||(
 $('#dlg').addEventListener('close',()=>{$('#dc').innerHTML='';try{history.replaceState(null,'',location.pathname)}catch(e){}});
 fetch('data.json').then(r=>r.json()).then(d=>{D=d;applyLang();const h=location.hash.slice(1);if(h&&D.some(s=>s.id===h))openCard(h)}).catch(()=>{$('#grid').innerHTML='<p class="empty">data.json</p>'});
 </script>
+</body></html>
 
